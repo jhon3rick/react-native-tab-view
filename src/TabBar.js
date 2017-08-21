@@ -79,7 +79,8 @@ export default class TabBar<T: Route<*>> extends PureComponent<
 
   static defaultProps = {
     getLabelText: ({ route }) =>
-      route.title ? route.title.toUpperCase() : null,
+    route.title ? route.title : null,
+    // route.title ? route.title.toUpperCase() : null,
   };
 
   constructor(props: Props<T>) {
